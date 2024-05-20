@@ -1,0 +1,7 @@
+INSERT INTO MY_INVENTORY
+VALUES
+    ('XYZ1234', 10)
+    ,('XYZ456', 15)
+    ,('XYZ789', 20)
+    ,('XYZ000', 50)
+;
