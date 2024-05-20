@@ -3,7 +3,8 @@ CREATE TABLE MY_INVENTORY (
     ,PRICE NUMBER
 );
 
-EXECUTE IMMEDIATE FROM './insert_inventory.sql';
+EXECUTE IMMEDIATE FROM 'scripts/02_execute_immediate/insert_inventory.sql';
+
 
 SELECT
     SKU
@@ -11,4 +12,4 @@ SELECT
 FROM MY_INVENTORY
 ORDER BY PRICE DESC;
 
-
+--DROP TABLE MY_INVENTORY;
