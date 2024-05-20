@@ -10,27 +10,7 @@ USE SCHEMA DEMO_DB.DEMO_SCHEMA;
 
 -----------------------------------------------------
 --- Step #1 Create a Secret to store the Github PAT
-CREATE OR REPLACE SECRET MMALODEMF_GITHUB_SECRET
-    TYPE = PASSWORD
-    USERNAME = ''
-    PASSWORD = ''
-;
------------------------------------------------------
---- Step #2 Create a GIT API Integration
-CREATE OR REPLACE API INTEGRATION git_api_integration
-  API_PROVIDER = GIT_HTTPS_API
-  API_ALLOWED_PREFIXES = ('')
-  ALLOWED_AUTHENTICATION_SECRETS = ()
-  ENABLED = TRUE;
 
-
------------------------------------------------------
---- Step #3 Create Repository
-CREATE OR REPLACE GIT REPOSITORY DEMO_REPO
-    API_INTEGRATION = git_api_integration
-    GIT_CREDENTIALS = MMALODEMF_GITHUB_SECRET
-    ORIGIN = ''
-;
 
 
 SHOW GIT REPOSITORIES;
